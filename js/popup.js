@@ -66,7 +66,8 @@ $popUpContent.on("click", "#play-again", function()
     getRandomWord();
     $keyboardUI.find("button").prop("disabled", false);
     $imageBox.html(updateImage());
-    $hintBox.html(wordHint);
+    const wordHintObject = new DisplayWordHint(wordHint);
+    wordHintObject.displayHint();
     $lettersBox.html(initializeLetterBoxes());
     $guessesBox.html(guessTracker());
     $popUpContent.html(initializePopup());
