@@ -6,3 +6,15 @@ main
         height: auto;
     }
 }
+
+@media(min-width: 1050px)
+{
+    main
+    {
+        img
+        {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
