@@ -1,6 +1,13 @@
 $border-color: black;
 $button-color: #e5e5e5;
 
+@mixin mobile-font
+{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
 *
 {
     font-family:'Lilita One', sans-serif;
@@ -18,10 +25,8 @@ header
 
 #hint-box
 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    @include mobile-font();
     font-style: italic;
-    font-size: 16px;
 }
 
 #guesses-box
@@ -57,10 +62,8 @@ header
 
 .letter
 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    @include mobile-font();
     font-style: normal;
-    font-size: 16px;
     text-align: center;
     text-transform: uppercase;
     border-bottom: solid 3px $border-color;
@@ -82,10 +85,8 @@ header
 
     p
     {
-        font-family: "Roboto", sans-serif;
-        font-weight: 500;
+        @include mobile-font();
         font-style: normal;
-        font-size: 16px;
     }
 
    button
