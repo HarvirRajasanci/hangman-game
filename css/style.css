@@ -1,0 +1,223 @@
+#wrapper {
+  background-color: white;
+  border-radius: 2rem;
+  padding: 3rem;
+  margin: auto;
+  max-width: 1320px;
+  display: grid;
+  justify-content: center;
+}
+
+* {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header h1 {
+  font-size: 30px;
+}
+
+#hint-box {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 16px;
+}
+
+#guesses-box {
+  font-size: 18px;
+}
+
+#keyboard-ui button {
+  font-size: 16px;
+  padding: 7px;
+  margin: 0.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  background-color: #e5e5e5;
+}
+#keyboard-ui button:disabled {
+  pointer-events: none;
+}
+#keyboard-ui button:hover {
+  opacity: 0.6;
+}
+
+.letter {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: solid 3px black;
+  width: 16px;
+}
+
+.letter.guessed {
+  border: transparent;
+}
+
+#pop-up-content h2 {
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+}
+#pop-up-content p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+}
+#pop-up-content button {
+  font-size: 16px;
+  padding: 7px;
+  margin-top: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1050px) {
+  .letter {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: solid 3px black;
+    width: 25px;
+  }
+  #keyboard-ui button {
+    font-size: 28px;
+    margin: 0.2rem;
+  }
+  header h1 {
+    font-size: 40px;
+  }
+  #hint-box {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 20px;
+  }
+  #guesses-box {
+    font-size: 24px;
+  }
+  #pop-up-content h2 {
+    font-size: 24px;
+  }
+  #pop-up-content p {
+    font-size: 18px;
+  }
+  #pop-up-content button {
+    font-size: 18px;
+    padding: 0.8rem;
+  }
+}
+body {
+  background-color: #eae0d5;
+  min-height: 100vh;
+  padding: 3rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#image-box {
+  display: grid;
+  justify-items: center;
+}
+
+#hint-box {
+  text-align: center;
+  margin: 2rem;
+}
+
+#guesses-box {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#letters-box ul {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-bottom: 3rem;
+  margin-left: -2.5rem;
+  list-style: none;
+}
+
+#keyboard-ui {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+  max-width: 380px;
+}
+
+@media (min-width: 1050px) {
+  #letters-box ul {
+    gap: 0.5rem;
+  }
+  #keyboard-ui {
+    max-width: 580px;
+  }
+  #hint-box {
+    margin-bottom: 3rem;
+  }
+}
+main img {
+  max-width: 50%;
+  height: auto;
+}
+
+#pop-up img {
+  max-width: 50%;
+  height: auto;
+}
+
+@media (min-width: 1050px) {
+  main img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+#pop-up {
+  opacity: 0;
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#pop-up-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 180px;
+  min-width: 300px;
+  padding: 3rem;
+  border-radius: 20px;
+  background-color: #eae0d5;
+  text-align: center;
+}
+
+@media (min-width: 1050px) {
+  #pop-up-content {
+    max-width: 400px;
+  }
+}
