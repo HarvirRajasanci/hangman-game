@@ -1,10 +1,12 @@
+$wrapper-color: white;
+
 #wrapper
 {
-    background-color: white;
-    border: solid 2px black;
+    background-color: $wrapper-color;
     border-radius: 2rem;
     padding: 2rem;
-    margin: 3rem;
+    margin: auto;
+    max-width: 1320px;
 
     display: grid;
     justify-content: center;
