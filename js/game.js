@@ -91,21 +91,9 @@ function initializeGame(button, clickedLetter)
     if(incorrectGuesses === maxGuesses) return gameOver(false);
 }
 
-function DisplayWordHint(hintForWord)
-{
-    this.hint = hintForWord;
-
-    this.displayHint = function()
-    {
-        $hintBox.html(this.hint);
-    }
-}
-
-
 getRandomWord();
 initializeKeyboard()
 $imageBox.html(updateImage());
-const wordHintObject = new DisplayWordHint(wordHint);
-wordHintObject.displayHint();
+$hintBox.html(wordHint);
 $lettersBox.html(initializeLetterBoxes());
 $guessesBox.html(guessTracker());
